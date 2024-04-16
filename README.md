@@ -15,13 +15,13 @@ This guide details how to set up the development environment for this React proj
 git clone https://github.com/Penstack-Inc/interview.git
 ```
 
-**2. Navigate to the Project Directory
+**2. Navigate to the Project Directory**
 
 ```Bash
 cd technical
 ```
 
-**3. Install Dependencies
+**3. Install Dependencies**
 
 The project uses a combination of npm packages for development and production. To install them all, run:
 
@@ -35,7 +35,7 @@ Important Note: If you encounter setup errors during installation, you might nee
 npm install force
 ```
 
-**4. Start the Development Server
+**4. Start the Development Server**
 
 The project utilizes Vite for development. To launch the development server and see the application running in your browser, execute:
 
