@@ -1,17 +1,19 @@
-Getting Started
+## Getting Started
 
 This guide details how to set up the development environment for this React project.
 
-Prerequisites
+### Prerequisites
 
-Node.js (version 14 or later): https://nodejs.org/en/download
-Git version control (optional, but recommended): https://git-scm.com/downloads
-Steps
+* Node.js (version 14 or later): [Download Node.js](https://nodejs.org/en/download)
+* Git version control (optional, but recommended): [Download Git](https://git-scm.com/downloads)
 
-Clone the Repository (if using Git)
+### Steps
 
-Bash
+**1. Clone the Repository (if using Git)**
+
+```Bash
 git clone https://<your-repo-url>.git
+```
 Use code with caution.
 Replace <your-repo-url> with the actual URL of your public Git repository.
 
