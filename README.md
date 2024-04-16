@@ -1,2 +1,2 @@
-# interview
-Simple Technical Interview
+# technical
+ 
