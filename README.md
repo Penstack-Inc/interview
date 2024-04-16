@@ -32,7 +32,7 @@ npm install
 Important Note: If you encounter setup errors during installation, you might need to force a reinstall of dependencies to ensure everything resolves correctly:
 
 ```Bash
-npm install force
+npm install --force
 ```
 
 **4. Start the Development Server**
