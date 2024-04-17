@@ -53,19 +53,19 @@ npm run dev: Starts the development server using Vite.
 npm run preview: Starts a preview server using Vite (exact behavior might vary depending on project configuration).
 
 
-###Cypress Test Suite Documentation
+### Cypress Test Suite Documentation
 
-###Overview
+### Overview
 
 This Cypress test suite is designed to ensure the functionality and integrity of our web application. It covers various scenarios and user interactions to validate that the application behaves as expected.
 
-###Prerequisites
+### Prerequisites
 Before running the tests, make sure you have the following installed:
 
 Node.js
 npm or yarn
 
-##Installation Steps
+### Installation Steps
 
 1. navigate to the test folder in the project directory
 ```Bash
@@ -82,10 +82,10 @@ npm install
 npm install cypress
 ```
 
-###Configuration
+### Configuration
 Before running the tests, ensure that the cypress.config.js file contains the correct configuration for your environment. You may need to update the base URL based on your local server URL and any other relevant configurations.
 
-###Running Tests
+### Running Tests
 To run the test suite, execute the following command:
 ```Bash
 npx cypress open
@@ -96,12 +96,12 @@ npm run cypress:open
 ```
 then navigate to the tests you want to run
 
-###Writing Tests
+### Writing Tests
 Tests are located in the Tests/cypress/e2e directory. You can create new test files or modify existing ones as needed. 
 
 Refer to the Cypress documentation for detailed information on writing tests.
 
-###Test Coverage
+### Test Coverage
 This test suite covers the following scenarios:
 Sign up negative and positive scenarios
 
