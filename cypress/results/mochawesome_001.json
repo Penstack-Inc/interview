@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-04-17T15:44:04.614Z",
+    "end": "2024-04-17T15:44:11.773Z",
+    "duration": 7159,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b3634a0f-2c49-4179-bad9-613d35f6976a",
+      "title": "",
+      "fullFile": "cypress/e2e/Interview/negativetest.cy.js",
+      "file": "cypress/e2e/Interview/negativetest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07ab5e57-dcbe-49ce-ab05-a739d7eaab4c",
+          "title": "Authentication scenerio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate that when password and confirm password input are entered no error message is displayed",
+              "fullTitle": "Authentication scenerio validate that when password and confirm password input are entered no error message is displayed",
+              "timedOut": null,
+              "duration": 5938,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@userData\").then(userData => {\n  cy.get(\"#firstName\").type(userData.firstname);\n  cy.get(\"#lastName\").type(userData.lastname);\n  cy.get(\"#email\").type(userData.email);\n  cy.get(\":nth-child(3) > .chakra-input__group > #password\").type(userData.password);\n  cy.get(\":nth-child(5) > .chakra-input__group > #password\").type(userData.confirm_password);\n});\ncy.get(\".css-1lggxi8 > .chakra-button\").click();\n// Assert that the error message element is not visible or does not exist\ncy.get(\"#password-feedback\").should(\"not.be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div#password-feedback.chakra-form__error-message.css-502kp3>' not to be 'visible'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div#password-feedback.chakra-form__error-message.css-502kp3>' not to be 'visible'\n    at Context.eval (webpack://technical/./cypress/e2e/Interview/negativetest.cy.js:25:35)",
+                "diff": null
+              },
+              "uuid": "8aeff07d-1204-4c7f-a532-d22eb414c582",
+              "parentUUID": "07ab5e57-dcbe-49ce-ab05-a739d7eaab4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate correct error message for empty fields",
+              "fullTitle": "Authentication scenerio validate correct error message for empty fields",
+              "timedOut": null,
+              "duration": 360,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".css-1lggxi8 > .chakra-button\").click();\ncy.get(\"#lastName-feedback\").should(\"be.visible\").invoke(\"text\").then(errorMessage => {\n  // Log the error message to the Cypress Command Log\n  cy.log(\"Error message:\", errorMessage);\n  // Perform assertions or further actions based on the error message\n  // For example, you can assert that the error message contains certain text\n  expect(errorMessage).to.contain(\"Last name is required\");\n});\ncy.get(\"#email-feedback\").should(\"be.visible\").invoke(\"text\").then(errorMessage => {\n  // Log the error message to the Cypress Command Log\n  cy.log(\"Error message:\", errorMessage);\n  // Perform assertions or further actions based on the error message\n  // For example, you can assert that the error message contains certain text\n  expect(errorMessage).to.contain(\"Email is required\");\n});\ncy.get(\"#password-feedback\").should(\"be.visible\").invoke(\"text\").then(errorMessage => {\n  // Log the error message to the Cypress Command Log\n  cy.log(\"Error message:\", errorMessage);\n  // Perform assertions or further actions based on the error message\n  // For example, you can assert that the error message contains certain text\n  expect(errorMessage).to.contain(\"Password Confirmation is required\");\n});\ncy.get(\"#firstName-feedback\").should(\"be.visible\").invoke(\"text\").then(errorMessage => {\n  // Log the error message to the Cypress Command Log\n  cy.log(\"Error message:\", errorMessage);\n  // Perform assertions or further actions based on the error message\n  // For example, you can assert that the error message contains certain text\n  expect(errorMessage).to.contain(\"First name is required\");\n});\ncy.get(\"#password-feedback\").should(\"be.visible\").invoke(\"text\").then(errorMessage => {\n  // Log the error message to the Cypress Command Log\n  cy.log(\"Error message:\", errorMessage);\n  // Perform assertions or further actions based on the error message\n  // For example, you can assert that the error message contains certain text\n  expect(errorMessage).to.contain(\"Password is required\");\n});",
+              "err": {
+                "message": "AssertionError: expected 'Firs name is required' to include 'First name is required'",
+                "estack": "AssertionError: expected 'Firs name is required' to include 'First name is required'\n    at Context.eval (webpack://technical/./cypress/e2e/Interview/negativetest.cy.js:73:34)",
+                "diff": null
+              },
+              "uuid": "3caf2846-1259-4a6c-89b2-3b97ddb202e6",
+              "parentUUID": "07ab5e57-dcbe-49ce-ab05-a739d7eaab4c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8aeff07d-1204-4c7f-a532-d22eb414c582",
+            "3caf2846-1259-4a6c-89b2-3b97ddb202e6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6298,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
