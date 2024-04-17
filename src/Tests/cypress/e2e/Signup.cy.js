@@ -360,6 +360,25 @@ describe("Sign up scenarios", () => {
      SignUp.confirmpasswordfeedback().should("have.text","Passwords must match")
     
   });
+  it("verify that the user is able to sign up with valid credentials", () => {
 
+    //visit log in page
+    cy.visit("/");
+    //input name and surname
+    SignUp.firstName().type("michael")
+    SignUp.lastName().type("Adeoye")
+
+    //enter email
+    SignUp.email().type("valid@email.com")
+    //enter password
+    SignUp.password().type("V@l1dpassword")
+    //confirm password 
+    SignUp.confirmPassword().type("V@l1dpassword")
+    //click on create account
+    SignUp.createAccount().click()
+    // verify that the account is successfully created by successmessage
+    cy.contains("Sign up successful").should("Exist")
+
+  });
 
 });
