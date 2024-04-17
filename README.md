@@ -54,3 +54,15 @@ npm run preview: Starts a preview server using Vite (exact behavior might vary d
 
 Additional Notes: For more advanced usage or customization, refer to the documentation for Vite, TypeScript, ESLint, and other technologies used in this project.
 By following these steps, you should be able to set up the development environment for your React project and start coding!
+
+
+
+**5. Run Cypress Command**
+
+The project utilizes Cypress as the testing framework. To launch the cypress server and see the automated test running in your browser, execute:
+
+```Bash
+npm run e2e-test
+```
+
+Note: Development server must be On before the Cypress command must work.
