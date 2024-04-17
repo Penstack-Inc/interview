@@ -64,4 +64,23 @@ describe("Authentication scenerio", () => {
       cy.get("#email").clear();
     });
   });
+
+  it("validate create account button is active and not disabled", () => {
+    
+    // Type a valid password into the password field
+    cy.get("@userData").then((userData) => {
+      cy.get(":nth-child(3) > .chakra-input__group > #password").type(userData.password);
+    })
+
+    // Assert that the password meets the criteria
+    cy.get(":nth-child(3) > .chakra-input__group > #password")
+      .invoke("val")
+      .then((password) => {
+        expect(password).to.have.length.of.at.least(8); // Check length
+        expect(password).to.match(/[A-Z]/); // Check for at least one uppercase letter
+        expect(password).to.match(/[a-z]/); // Check for at least one lowercase letter
+        expect(password).to.match(/[0-9]/); // Check for at least one number
+        expect(password).to.match(/[!@#$%^&*()_+{}\[\]:;<>,.?~\\|=\/-]/); // Check for at least one symbol
+      });
+  });
 });
